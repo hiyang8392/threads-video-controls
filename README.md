@@ -16,7 +16,7 @@
 
 ### 安裝及使用
 * 下載並解壓縮
-* 打開 Chrmoe 瀏覽器，進入 `chrome://extensions/`
+* 打開 Chrome 瀏覽器，進入 `chrome://extensions/`
 * 點擊`載入未封裝項目`，選擇此資料夾
 * 在 Threads 頁面上就可以打開擴充功能`Threads Video Controls`
 * 調整音量大小就可以將頁面所有的影片音量調整為相同大小
