@@ -15,8 +15,11 @@
 而且因為目前 threads 上的影片格式是 mp4，所以可以直接下載影片。
 
 ### 安裝及使用
-* 下載並解壓縮
-* 打開 Chrome 瀏覽器，進入 `chrome://extensions/`
-* 點擊`載入未封裝項目`，選擇此資料夾
-* 在 Threads 頁面上就可以打開擴充功能`Threads Video Controls`
-* 調整音量大小就可以將頁面所有的影片音量調整為相同大小
+
+https://chromewebstore.google.com/detail/ecjnecoekckohdliinndojalaakmkcld?utm_source=item-share-cb
+
+1. 進入網址點擊 `加到 Chrome`
+2. 在瀏覽器上的擴充功能，點選剛加入的 `Threads Video Controls`
+3. 調整音量大小即可將 Threads 所有的影片音量調整為相同大小
+
+若遇到問題，例如影片播不出來或網頁讀不出東西，可能原因會是 Threads 有做改版更新，請直接移除該擴充功能即可。

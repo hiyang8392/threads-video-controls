@@ -2,10 +2,10 @@
   "manifest_version": 3,
   "name": "Threads Video Controls",
   "description": "打開 Threads 的影片控制項，與調整所有影片音量的控制介面",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "permissions": ["storage"],
   "host_permissions": [
-    "https://www.threads.net/"
+    "https://www.threads.com/"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -17,7 +17,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.threads.net/*"],
+      "matches": ["https://www.threads.com/*"],
       "js": ["execute.js"]
     }
   ]
