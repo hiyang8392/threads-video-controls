@@ -3,11 +3,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     const videos = document.querySelectorAll("video");
     videos.forEach(function (video) {
       video.volume = message.volume;
-      if (message.volume < 0.01) {
-        video.muted = true;
-      } else {
-        video.muted = false;
-      }
+      video.muted = message.volume < 0.01;
     });
   }
 });
@@ -34,6 +30,13 @@ function handleVideoElement() {
       if (volume < 0.01) {
         video.volume = 0;
         video.muted = true;
+      }
+
+      if (!video.dataset.videoListener) {
+        video.dataset.videoListener = "true";
+        video.addEventListener("volumechange", () => {
+          chrome.storage.local.set({ volume: video.volume });
+        });
       }
     });
   });
