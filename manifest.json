@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Threads Video Controls",
-  "description": "打開 Threads 的影片控制項，與調整所有影片音量的控制介面",
-  "version": "1.2.0",
+  "description": "打開 Threads 文章內的影片播放器介面，以及自動打開劇透內容",
+  "version": "1.3.0",
   "permissions": ["storage"],
   "host_permissions": [
     "https://www.threads.com/"
