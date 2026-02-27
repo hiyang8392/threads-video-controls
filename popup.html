@@ -6,8 +6,16 @@
     <title>Threads Video Controls</title>
 </head>
 <body>
-    <label for="volumeInput">Volume: <span id="volumeDisplay"></span></label>
-    <input type="range" min="0" max="1" step="0.01" value="0" id="volumeInput">
+    <div class="control-group">
+        <label for="volumeInput">Volume: <span id="volumeDisplay"></span></label>
+        <input type="range" min="0" max="1" step="0.01" value="0" id="volumeInput">
+    </div>
+    <div class="control-group checkbox-group">
+        <label for="autoClickSpoiler">
+            <input type="checkbox" id="autoClickSpoiler">
+            自動打開劇透內容
+        </label>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>

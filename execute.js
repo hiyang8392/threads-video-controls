@@ -90,17 +90,26 @@ function autoClickMediaSpoilerButtons() {
   });
 }
 
+function handleSpoilerButtonClick() {
+  if (!chrome || !chrome.storage || !chrome.storage.local) return;
+
+  chrome.storage.local.get(['autoClickSpoiler'], function (data) {
+    if (data.autoClickSpoiler) {
+      autoClickTextSpoilerButtons();
+      autoClickMediaSpoilerButtons();
+    }
+  });
+}
+
 const observer = new MutationObserver(function (mutationsList, observer) {
   mutationsList.forEach(function (mutation) {
     if (mutation.type === 'childList') {
       handleVideoElement();
-      autoClickTextSpoilerButtons();
-      autoClickMediaSpoilerButtons();
+      handleSpoilerButtonClick();
     }
   });
 });
 observer.observe(document.body, { childList: true, subtree: true });
 
 handleVideoElement();
-autoClickTextSpoilerButtons();
-autoClickMediaSpoilerButtons();
+handleSpoilerButtonClick();
