@@ -1,9 +1,8 @@
 # Threads 電腦版影片播放器
 
 ### demo
-![demo image1](https://i.imgur.com/qQ3dkmH.png)
-![demo image2](https://i.imgur.com/A69prUF.png)
-![demo image3](https://i.imgur.com/5wfKZSm.png)
+![demo image1](https://meee.com.tw/nRfazcT.png)
+![demo image2](https://i.imgur.com/5wfKZSm.png)
 
 ### 說明
 在 FB、IG、Threads 上，電腦版的播放器都是預設 100% 的音量且不給使用者自行調整播放器的音量大小，這樣每次看影片的時候都要自己調整電腦的音量太麻煩了，所以寫了一個 Chrome Extension 來控制播放器的音量大小。
@@ -14,12 +13,16 @@
 
 而且因為目前 threads 上的影片格式是 mp4，所以可以直接下載影片。
 
+#### version 1.3.0 新增自動打開劇透內容功能
+因為劇透功能被大量發文者氾濫使用，導致看文章都要一直去點那個劇透按鈕，所以就新增了一個自動解鎖功能
+
 ### 安裝及使用
 
 https://chromewebstore.google.com/detail/ecjnecoekckohdliinndojalaakmkcld?utm_source=item-share-cb
 
 1. 進入網址點擊 `加到 Chrome`
 2. 在瀏覽器上的擴充功能，點選剛加入的 `Threads Video Controls`
-3. 調整音量大小即可將 Threads 所有的影片音量調整為相同大小
+3. 調整音量大小即可將 Threads 所有的影片音量調整為相同大小，或是直接在該文章影片的音量調整也可以同時調整所有影片的音量
+4. 勾選 `自動打開劇透內容` 即可自動打開所有文章內的劇透內容
 
 若遇到問題，例如影片播不出來或網頁讀不出東西，可能原因會是 Threads 有做改版更新，請直接移除該擴充功能即可。
