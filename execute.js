@@ -59,6 +59,9 @@ function autoClickTextSpoilerButtons() {
     const parentSpan = button.closest(SPOILER_DIV);
     if (!parentSpan) return;
 
+    const firstChild = button.children[0];
+    if (!firstChild || firstChild.tagName === 'SPAN') return;
+
     parentSpan.querySelectorAll('span').forEach(function (span) {
       span.setAttribute('data-original-visible', 'true');
     });
