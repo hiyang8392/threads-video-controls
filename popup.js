@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
         volumeInputEl.value = volume;
         volumeDisplayEl.textContent = `${(volume * 100).toFixed()}%`;
       }
-      autoClickSpoilerEl.checked = !!data.autoClickSpoiler;
+
+      if (data.autoClickSpoiler === false) {
+        autoClickSpoilerEl.checked = false;
+      }
     });
 
     volumeInputEl.addEventListener('input', function () {

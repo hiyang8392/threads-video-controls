@@ -59,6 +59,9 @@ function autoClickTextSpoilerButtons() {
     const parentSpan = button.closest(SPOILER_DIV);
     if (!parentSpan) return;
 
+    const firstChild = button.children[0];
+    if (!firstChild || firstChild.tagName === 'SPAN') return;
+
     parentSpan.querySelectorAll('span').forEach(function (span) {
       span.setAttribute('data-original-visible', 'true');
     });
@@ -94,7 +97,7 @@ function handleSpoilerButtonClick() {
   if (!chrome || !chrome.storage || !chrome.storage.local) return;
 
   chrome.storage.local.get(['autoClickSpoiler'], function (data) {
-    if (data.autoClickSpoiler) {
+    if (data.autoClickSpoiler !== false) {
       autoClickTextSpoilerButtons();
       autoClickMediaSpoilerButtons();
     }
