@@ -97,7 +97,7 @@ function handleSpoilerButtonClick() {
   if (!chrome || !chrome.storage || !chrome.storage.local) return;
 
   chrome.storage.local.get(['autoClickSpoiler'], function (data) {
-    if (data.autoClickSpoiler) {
+    if (data.autoClickSpoiler !== false) {
       autoClickTextSpoilerButtons();
       autoClickMediaSpoilerButtons();
     }
