@@ -59,8 +59,7 @@ function autoClickTextSpoilerButtons() {
     const parentSpan = button.closest(SPOILER_DIV);
     if (!parentSpan) return;
 
-    const firstChild = button.children[0];
-    if (!firstChild || firstChild.tagName === 'SPAN') return;
+    if (!button.querySelector('[data-text-fragment="spoiler"]')) return;
 
     parentSpan.querySelectorAll('span').forEach(function (span) {
       span.setAttribute('data-original-visible', 'true');
@@ -76,6 +75,8 @@ function autoClickTextSpoilerButtons() {
     .forEach(function (span) {
       if (span.closest('[role="button"]')) return;
       span.style.backgroundColor = SPOILER_COLOR;
+      span.style.padding = '2px 4px';
+      span.style.borderRadius = '6px';
     });
 }
 
